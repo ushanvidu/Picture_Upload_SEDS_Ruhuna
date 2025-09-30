@@ -63,7 +63,7 @@ function App() {
 
                                 <div>
                                     <h1 className="text-2xl md:text-4xl font-bold text-white mb-1 md:mb-2">
-                                        SEDS-RUHNA SPACE Photography
+                                        SEDS Ruhuna Space Photography
                                     </h1>
                                     <p className="text-gray-400 text-sm md:text-base">
                                         Capture the cosmos through your lens
