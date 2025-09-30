@@ -19,6 +19,10 @@ const photoSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    userPhonenumber:{
+        type: String,
+        required: true,
+    },
 
     imageUrl: {
         type: String,
