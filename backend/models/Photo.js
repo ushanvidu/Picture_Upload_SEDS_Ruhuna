@@ -6,10 +6,20 @@ const photoSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
+
     description: {
         type: String,
-        trim: true
+        required: true,
     },
+    imageCatogory:{
+        type: String,
+        required: true,
+    },
+    imageType:{
+        type: String,
+        required: true,
+    },
+
     imageUrl: {
         type: String,
         required: true
@@ -22,20 +32,32 @@ const photoSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    format: {
+    userName:{
         type: String,
-        required: true
+        required: true,
     },
-    size: {
-        type: Number,
-        required: true
+    userEmail:{
+        type: String,
+        required: true,
     },
-    width: {
-        type: Number
+    userUnivercity:{
+        type: String,
+
     },
-    height: {
-        type: Number
-    },
+    // format: {
+    //     type: String,
+    //     required: true
+    // },
+    // size: {
+    //     type: Number,
+    //     required: true
+    // },
+    // width: {
+    //     type: Number
+    // },
+    // height: {
+    //     type: Number
+    // },
     tags: [{
         type: String,
         trim: true

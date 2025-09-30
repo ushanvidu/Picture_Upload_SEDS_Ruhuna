@@ -1,5 +1,7 @@
 const express = require('express');
 const cors = require('cors');
+
+process.env.DOTENV_CONFIG_QUIET = true;
 require('dotenv').config();
 
 const connectDB = require('./config/database');
@@ -17,6 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/api', photoRoutes);
+
 
 // Health check route
 app.get('/health', (req, res) => {

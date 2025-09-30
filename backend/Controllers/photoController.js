@@ -30,17 +30,18 @@ const uploadPhoto = async (req, res) => {
             uploadStream.end(req.file.buffer);
         });
 
-        // Create photo document in MongoDB
+        // Create photo_document in MongoDB
         const photo = new Photo({
             title: req.body.title || 'Untitled',
-            description: req.body.description || '',
+            description: req.body.description ,
             imageUrl: uploadResult.secure_url,
             cloudinaryId: uploadResult.asset_id,
             publicId: uploadResult.public_id,
-            format: uploadResult.format,
-            size: uploadResult.bytes,
-            width: uploadResult.width,
-            height: uploadResult.height,
+            // format: uploadResult.format,
+            imageType: req.body.imageType,
+            userName: req.body.userName,
+            userEmail: req.body.userEmail,
+            userUnivercity: req.body.userUnivercity||" ",
             tags: req.body.tags ? req.body.tags.split(',').map(tag => tag.trim()) : [],
             uploadedBy: req.body.uploadedBy || 'anonymous'
         });
